@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<title>Web Developer</title>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/navbar.css">
+  
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="javascript:void(0);">Webfolio</a>
+    </div>
+    
+    <ul class="nav navbar-nav" id="navigation">      
+      <li><a href="#">About</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Skills</a></li>
+    </ul>
+  </div>
+</nav>
+    
+    <div class="container">        
+        <div class="row" id="about">
+            <div class="col-md-12">
+             <h1>About</h1>
+             </div>
+            <div class="col-md-6">
+             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="col-md-6">
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>                
+            </div>
+        </div>
+        <div class="row" id="portfolio">
+            <div class="col-md-12">
+             <h1>About</h1>
+             </div>
+            <div class="col-md-6">
+               <div class="jumbotron">
+               </div>
+            </div>
+            <div class="col-md-6">
+                 
+                    <div class="card mb-4 box-shadow">
+                       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                    
+                    <div class="card mb-4 box-shadow">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                    <div class="card mb-4 box-shadow">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                    
+                    <div class="card mb-4 box-shadow">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                               
+            </div>
+        </div>
+         <div class="row" id="skills">
+            <div class="col-md-12">
+             <h1>About</h1>
+             </div>
+            <div class="col-md-12">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        </div>
+         
+         <div class="row" id="contact">
+            
+         </div>
+        
+    </div>
+    <div class="container">
+        <div class="col-md-12 footerlinks">            
+            <button type="button" class="btn btn-secondary">L</button>
+            <button type="button" class="btn btn-secondary">G</button>
+            <button type="button" class="btn btn-secondary">S</button>
+        </div>
+    </div>
+     <script src="js/jquery-3.3.1.min.js"></script>     
+     <script src="js/bootstrap.min.js"></script>
+     <script>
+            $(function(){            
+                $('#navigation li a').click(function(e){
+                    var goto =  $.trim( $(this).text().toLowerCase() );
+                    if (goto) {                
+                        $('html, body').animate({
+                            scrollTop: $("#"+goto).offset().top
+                            }, 'slow');
+                        }
+                    e.preventDefault();
+                });            
+            });
+     </script>
+</body>
+<style>
+.footerlinks{
+    padding-top: 100px;        
+}
+.footerlinks button{
+    float: right;
+    margin: 2px;
+}
+.pricing-header {
+  max-width: 700px;
+}
+.card-deck .card {
+  min-width: 220px;
+}
+</style>
+</html>
