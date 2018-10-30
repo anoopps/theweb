@@ -13,7 +13,7 @@
      <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5bd817e5ee8c70001192a106&product=inline-share-buttons' async='async'></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <a class="navbar-brand" href="javascript:void(0);">Webfolio</a>
@@ -134,8 +134,10 @@
                <li>HTML</li>
                <li>CSS</li>
                <li>jQuery</li>
+               <li>Ajax</li>
                <li>Javascript</li>
-
+               <li>SVN</li>
+               <li>GIT</li>
                </ul>
 
             </div>
@@ -170,7 +172,7 @@
                     var goto =  $.trim( $(this).text().toLowerCase() );
                     if (goto) {                
                         $('html, body').animate({
-                            scrollTop: $("#"+goto).offset().top
+                            scrollTop: $("#"+goto).offset().top-100
                             }, 'slow');
                         }
                     e.preventDefault();
