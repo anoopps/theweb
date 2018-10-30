@@ -17,6 +17,7 @@ body{
 }
 .row{
   height: auto;
+  padding: 40px 0 40px 0;
   clear: both;
 }
 a{
@@ -78,6 +79,12 @@ font-size: 50px!important;
   float: left;
   border: 1px solid #ccc;
   list-style: none;
+  overflow: hidden;
   width:180px;
   height: 200px;
+  background-color: #eee;
+}
+.block-lists-skills li img{
+  width: 100%;
+  object-fit: contain;
 }
