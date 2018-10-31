@@ -77,12 +77,16 @@ font-size: 50px!important;
   padding: 2px;
   margin: 10px;
   float: left;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   list-style: none;
   overflow: hidden;
   width:180px;
   height: 200px;
-  background-color: #eee;
+  transition: 0.3s;
+ 
+}
+.block-lists-skills li:hover{
+  border: 2px solid #ff4949;
 }
 .block-lists-skills li img{
   width: 100%;
