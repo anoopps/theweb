@@ -18,6 +18,7 @@ body{
 .row{
   height: auto;
   padding: 40px 0 40px 0;
+  margin:0 0 10px 0;
   clear: both;
 }
 a{
@@ -29,7 +30,7 @@ a:hover{
   text-decoration: none;  
 }
 p{
-  margin: 0px 0px 8px 0;
+  margin: 0px 0px 10px 0;
   padding: 0px;
 }
 .footerlinks{
@@ -42,10 +43,19 @@ p{
 .pricing-header {
   max-width: 700px;
 }
-.card-deck .card {
-  min-width: 220px;
-}
+.card {
+  width: 48%;
+  float:left;
+  margin: 10px;
+  display: block;
+  height: 200px;
 
+}
+#portfolio{
+  height: auto;
+  clear: both;
+  display: block;
+}
 ul.block-lists{
   clear: both;
   display: block;
@@ -74,7 +84,7 @@ font-size: 50px!important;
 }
 
 .block-lists-skills li{
-  padding: 2px;
+  padding: 4px;
   margin: 10px;
   float: left;
   border: 2px solid #ccc;
@@ -83,7 +93,7 @@ font-size: 50px!important;
   width:180px;
   height: 200px;
   transition: 0.3s;
- 
+background-color: #eee; 
 }
 .block-lists-skills li:hover{
   border: 2px solid #ff4949;
