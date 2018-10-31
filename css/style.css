@@ -103,11 +103,11 @@ background-color: #fff;
   object-fit: contain;
 }
 
+
+
 /*Small devices (landscape phones, 576px and up)*/
 @media only screen and (max-width: 576px) {
-#theweb img{
-display: none;
-}
+  .col-12 {width: 100%;}
 .block-lists-skills li{
   width: 100px;
   height: 150px;
@@ -118,12 +118,21 @@ display: none;
 }
 
 @media only screen and (max-width: 768px) {
+  .col-6 {width: 100%;}
   #theweb img{
     display: none;
     }
     .card{
-      display: block;
+      display: inline-table;
       margin: 0 0 20px 0;
-      width: 40%;
+      width: 100%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+      .card{
+      display: inline-table;
+      margin: 0 0 20px 0;
+      width: 50%;
     }
 }
