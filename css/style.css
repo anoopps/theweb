@@ -60,6 +60,10 @@ p{
   clear: both;
   display: block;
 }
+#portfolio .col-md-6{
+margin-bottom: 15px;
+height: 180px;
+}
 ul.block-lists{
   clear: both;
   display: block;
