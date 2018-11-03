@@ -61,6 +61,7 @@ p{
   display: block;
 }
 #portfolio .col-md-6{
+  display: inline-block;
 margin-bottom: 15px;
 height: 200px;
 }
