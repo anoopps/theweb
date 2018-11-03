@@ -62,7 +62,7 @@ p{
 }
 #portfolio .col-md-6{
 margin-bottom: 15px;
-height: 180px;
+height: 200px;
 }
 ul.block-lists{
   clear: both;
@@ -115,6 +115,9 @@ background-color: #fff;
 
 /*Small devices (landscape phones, 576px and up)*/
 @media only screen and (max-width: 576px) {
+  #maincontainer{
+    padding-top:200px;
+  }  
   .col-12 {width: 100%;}
 .block-lists-skills li{
   width: 100px;
@@ -126,6 +129,9 @@ background-color: #fff;
 }
 
 @media only screen and (max-width: 768px) {
+  #maincontainer{
+    padding-top:200px;
+  } 
   .col-6 {width: 100%;}
   #theweb img{
     display: none;
