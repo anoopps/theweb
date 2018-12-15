@@ -239,11 +239,18 @@
              <h1>Contact</h1>
              </div>
             <div class="col-md-12">
-                <p>Please drop me a mail, <a href="anoopps_resume.pdf" target="_blank">click here</a> to check my resume. </p>
-                <ul class="block-lists">
-                    <li>Email: <a href="mailto:anoopps@gmail.com">anoopps1111@gmail.com</a></li>
-                    <li>LinkedIn: <a href="https://www.linkedin.com/in/g2j6ne/" target="_blank">www.linkedin.com/in/g2j6ne/</a> </li>
-                    <li>Github: <a href="https://github.com/anoopps" target="_blank">github.com/anoopps</li>
+                <p>Interested in working on innovative projects, every time like to come up with new creative idea and style in information technology</p>
+                <p>Please <a href="anoopps_resume.pdf" target="_blank">click here</a> to download my resume.</p>
+                <ul class="block-lists-contact">
+                  <li>
+                  <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-placement="bottom" data-toggle="popover" data-trigger="focus" title="Email" data-content="anoopps1111@gmail.com">Email</a>  
+                  </li>
+                  <li>
+                  <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-placement="bottom" data-toggle="popover"  data-trigger="focus"  title="LinkedIn" data-content="www.linkedin.com/in/g2j6ne/">LinkedIn</a>   
+                  </li>
+                  <li>
+                  <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-placement="bottom" data-toggle="popover"  data-trigger="focus" title="Github" data-content="github.com/anoopps">GitHub</a> 
+                  </li>    
                 </ul>
                   
             </div>
@@ -254,9 +261,16 @@
                 <div class="sharethis-inline-share-buttons"></div>
         </div>
     </div>
-     <script src="js/jquery-3.3.1.min.js"></script>     
-     <script src="js/bootstrap.min.js"></script>
-     <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5bd817e5ee8c70001192a106&product=inline-share-buttons' async='async'></script>
+     <div class="container">
+        <div class="col-md-12 footerlinks">
+               <hr>
+                Developed by anoopps 
+        </div>
+    </div>
+     <script src="js/jquery-3.3.1.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>   
+    <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5bd817e5ee8c70001192a106&product=inline-share-buttons"></script>
 
      <script>
             $(function(){            
@@ -268,7 +282,11 @@
                             }, 'slow','swing');
                         }
                     e.preventDefault();
-                });            
+                });
+ 
+                $(function () {
+  $('[data-toggle="popover"]').popover()
+})
             });
      </script>
 </body>
