@@ -2,7 +2,12 @@ h1{
   font-family: 'Limelight', cursive;
   font-size: 100px;
   margin: 0px 0px 8px 0;  
-  color: #d5d5d5;
+  color: #5c5c5c33;
+}
+#navigation a{
+  font-family: 'Limelight', cursive;
+  background-color: #f8f8f8;
+  color: #ff4949;
 }
 .breadcrumb a{
    color: #444;
@@ -13,7 +18,7 @@ h1{
    background-color:none!important;
 }
 #theweb{ 
-font-size: 18px;  
+  font-size: 18px;  
 }
 h2,h3,h4{
   font-family: 'Limelight', cursive;
@@ -106,18 +111,19 @@ font-size: 50px!important;
   border: 2px solid #eee;
   list-style: none;
   overflow: hidden;
-  width:139px;
-  height: 156px;
+  padding: 13px 22px; width: 250px;
   transition: 1s;
-background-color: #fff; 
+  background-color: #fff; 
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 15px;  
+}
+.block-lists-skills li img{ 
+  width: 32px; height: 34px; margin: 10px;
 }
 .block-lists-skills li:hover{
   border: 2px solid #ff4949;
-}
-.block-lists-skills li img{
-  width: 100%;
-  object-fit: contain;
-}
+} 
 
 ul.block-lists-contact{
   clear: both;
@@ -132,36 +138,47 @@ ul.block-lists-contact li{
    font-size: 11px;font-weight: bold;
    text-transform: uppercase;   
 }
-
+.navbar-toggler {
+float: right;
+}
 /*Small devices (landscape phones, 576px and up)*/
 @media only screen and (max-width: 576px) {
-  #maincontainer{
-    padding-top:200px;
-  }  
-  .col-12 {width: 100%;}
+#maincontainer{
+  padding-top:200px;
+}  
+.col-12 {width: 100%;}
 .block-lists-skills li{
-  width: 100px;
-  height: 150px;
+width: 100px;  
 }  
 .card{
-  width: 100%;
+width: 100%;
+}
+#navigation{
+width: 100%;
 }
 }
 
 @media only screen and (max-width: 768px) {
-  #maincontainer{
-    padding-top:200px;
-  } 
-  .col-6 {width: 100%;}
-  #theweb img{
-    display: none;
-    }
-    .card{
-      display: inline-table;
-      margin: 0 0 20px 0;
-      width: 100%;
-    }
+#maincontainer{
+padding-top:200px;
+} 
+.col-6 {width: 100%;}
+#theweb img{
+display: none;
 }
+.card{
+  display: inline-table;
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+nav .navbar-nav {
+  background-color: white;
+}
+#navigation{
+  width: 100%;
+  }
+}
+.navbar-brand{color:#f00 !important; }
 
 @media only screen and (max-width: 992px) {
       .card{
