@@ -2,7 +2,7 @@ h1{
   font-family: 'Limelight', cursive;
   font-size: 100px;
   margin: 0px 0px 8px 0;  
-  color: #d5d5d5;
+  color: #ff49494d;
 }
 .breadcrumb a{
    color: #444;
@@ -106,18 +106,18 @@ font-size: 50px!important;
   border: 2px solid #eee;
   list-style: none;
   overflow: hidden;
-  width:139px;
-  height: 156px;
+  padding: 13px 22px; width: 250px;
   transition: 1s;
-background-color: #fff; 
+  background-color: #fff; 
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.block-lists-skills li img{ 
+  width: 32px; height: 34px; margin: 10px;
 }
 .block-lists-skills li:hover{
   border: 2px solid #ff4949;
-}
-.block-lists-skills li img{
-  width: 100%;
-  object-fit: contain;
-}
+} 
 
 ul.block-lists-contact{
   clear: both;
