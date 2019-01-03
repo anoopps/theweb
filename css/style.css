@@ -4,9 +4,10 @@ h1{
   margin: 0px 0px 8px 0;  
   color: #5c5c5c33;
 }
-#navigation{
+#navigation a{
   font-family: 'Limelight', cursive;
   background-color: #f8f8f8;
+  color: #ff4949;
 }
 .breadcrumb a{
    color: #444;
