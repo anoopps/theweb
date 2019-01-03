@@ -2,7 +2,7 @@ h1{
   font-family: 'Limelight', cursive;
   font-size: 100px;
   margin: 0px 0px 8px 0;  
-  color: #ff49494d;
+  color: #5c5c5c33;
 }
 .breadcrumb a{
    color: #444;
@@ -110,7 +110,8 @@ font-size: 50px!important;
   transition: 1s;
   background-color: #fff; 
   text-transform: uppercase;
-  font-weight: bold;
+  text-align: left;
+  font-size: 15px;  
 }
 .block-lists-skills li img{ 
   width: 32px; height: 34px; margin: 10px;
@@ -132,7 +133,15 @@ ul.block-lists-contact li{
    font-size: 11px;font-weight: bold;
    text-transform: uppercase;   
 }
-
+#navigation{
+  float: left;
+}
+.navbar-toggler {
+  background-color:#444;
+  width: 20px; height: 20px; border: 1px solid;
+  float: right;
+  
+}
 /*Small devices (landscape phones, 576px and up)*/
 @media only screen and (max-width: 576px) {
   #maincontainer{
@@ -140,8 +149,7 @@ ul.block-lists-contact li{
   }  
   .col-12 {width: 100%;}
 .block-lists-skills li{
-  width: 100px;
-  height: 150px;
+  width: 100px;  
 }  
 .card{
   width: 100%;
@@ -160,6 +168,9 @@ ul.block-lists-contact li{
       display: inline-table;
       margin: 0 0 20px 0;
       width: 100%;
+    }
+    nav .navbar-nav {
+      background-color: white;
     }
 }
 
