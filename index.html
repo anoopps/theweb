@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <head>
-<title>myWeb Developer Portfolio</title>
+<title>theWeb anoop portfolio</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link href="https://fonts.googleapis.com/css?family=Limelight|Open+Sans:300" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Limelight|Open+Sans:300" rel="stylesheet">
      <link rel="stylesheet" href="css/bootstrap.min.css">
-     
-     <link rel="stylesheet" href="css/navbar.css">
      <link rel="stylesheet" href="css/style.css">
+
+     <script src="js/jquery-3.3.1.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+     <script src="js/bootstrap.min.js"></script> 
   </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="javascript:void(0);">Webfolio</a>
-    </div>
+    <div class="container">
+ <header>     
+        <nav class="navbar navbar-default navbar-fixed-top">
+                <a class="navbar-brand" href="#">theWeb - portfolio</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav nav" id="navigation">                   
+                    <li class="nav-item">
+                      <a href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Contact</a>
+                    </li>                    
+                  </ul>
+                </div>
+              </nav>
+ </header>
     
-    <ul class="nav navbar-nav" id="navigation">      
-        <li><a href="#">theWeb</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-    
-    <div class="container" id="maincontainer">        
+    <div id="maincontainer">        
         <div class="row" id="theweb">
             <div class="col-md-12">
              <h1>theWeb</h1>
@@ -217,18 +230,18 @@
              </div> 
             <div class="col-md-12">
                     <ul class="block-lists-skills" >
-               <li><img src="images/php.png" title="php" alt="php"></li>
-               <li><img src="images/mysql.png" title="mysql" alt="mysql"></li>
-               <li><img src="images/codeigniter.png" title="codeigniter" alt="codeigniter"></li>
-               <li><img src="images/joomla.png" title="joomla" alt="joomla"></li>               
-               <li><img src="images/html.png" title="HTML" alt="HTML"></li>
-               <li><img src="images/css.png" title="CSS" alt="css"></li>
-               <li><img src="images/bootstrap.png" title="Bootstrap" alt="bootstrap"></li>
-               <li><img src="images/jquery.png" title="jQuery" alt="jQuery"></li>
-               <li><img src="images/js.png" title="javascript" alt="javascript"></li>
-               <li><img src="images/ajax.png" title="Ajax" alt="ajax"></li>               
-               <li><img src="images/svn.png" title="SVN" alt="svn"></li>
-               <li><img src="images/github.png" title="GITHUB" alt="github"></li>               
+               <li><img src="images/php.png" title="php" alt="php">Php</li>
+               <li><img src="images/mysql.png" title="mysql" alt="mysql">mysql</li>
+               <li><img src="images/codeigniter.png" title="codeigniter" alt="codeigniter">codeigniter</li>
+               <li><img src="images/joomla.png" title="joomla" alt="joomla">joomla</li>               
+               <li><img src="images/html.png" title="HTML" alt="HTML">HTML</li>
+               <li><img src="images/css.png" title="CSS" alt="css">css</li>
+               <li><img src="images/bootstrap.png" title="Bootstrap" alt="bootstrap">bootstrap</li>
+               <li><img src="images/jquery.png" title="jQuery" alt="jQuery">jQuery</li>
+               <li><img src="images/js.png" title="javascript" alt="javascript">javascript</li>
+               <li><img src="images/ajax.png" title="Ajax" alt="ajax">ajax</li>               
+               <li><img src="images/svn.png" title="SVN" alt="svn">svn</li>
+               <li><img src="images/github.png" title="GITHUB" alt="github">github</li>               
                </ul>
 
             </div>
@@ -256,25 +269,21 @@
             </div>
          </div>
     </div>
-    <div class="container">
-        <div class="col-md-12 footerlinks">            
-                <div class="sharethis-inline-share-buttons"></div>
-        </div>
+    
+    <div class="col-md-12 footerlinks">            
+            <div class="sharethis-inline-share-buttons"></div>
     </div>
-     <div class="container">
-        <div class="col-md-12 footerlinks">
-               <hr>
-                Developed by anoopps 
-        </div>
+    <div class="col-md-12 footerlinks">
+            <hr>
+            Developed by anoopps 
     </div>
-     <script src="js/jquery-3.3.1.min.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-     <script src="js/bootstrap.min.js"></script>   
+
+    </div>
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5bd817e5ee8c70001192a106&product=inline-share-buttons"></script>
 
      <script>
             $(function(){            
-                $('#navigation li a').click(function(e){
+                $('#navbarNavDropdown li a').click(function(e){
                     var goto =  $.trim( $(this).text().toLowerCase() );
                     if (goto) {                
                         $('html, body').animate({
