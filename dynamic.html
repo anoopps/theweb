@@ -1,0 +1,676 @@
+ 
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en-gb"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en-gb"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en-gb"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+   	<meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+	<base href="https://www.square-brussels.com/en/faq.html" />
+	<meta name="keywords" content="Square, Brussels Meeting Centre, squarebrussels" />
+	<meta name="description" content="Square – Brussels Meeting Centre" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>FAQ</title>
+	<link href="https://www.square-brussels.com/en/faq.html" rel="alternate" hreflang="en-GB" />
+	<link href="https://www.square-brussels.com/fr/faq.html" rel="alternate" hreflang="fr-FR" />
+	<link href="https://www.square-brussels.com/nl/faq.html" rel="alternate" hreflang="nl-NL" />
+	<link href="/templates/square/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="https://www.square-brussels.com/en/component/search/?Itemid=145&amp;format=opensearch" rel="search" title="Search SQUARE - Brussels Convention Centre" type="application/opensearchdescription+xml" />
+	<link href="https://www.square-brussels.com/modules/mod_cookielaw/assets/css/jquery.cookiebar.css" rel="stylesheet" />
+	<link href="/media/mod_languages/css/template.css" rel="stylesheet" />
+	<script src="/templates/square/js/jui/jquery.min.js"></script>
+	<script src="/media/jui/js/jquery-noconflict.js"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js"></script>
+	<script src="/templates/square/js/jui/bootstrap.min.js"></script>
+	<script src="/media/system/js/html5fallback.js"></script>
+	<link href="https://www.square-brussels.com/en/faq.html" rel="alternate" hreflang="x-default" />
+
+
+
+<!-- Mobile Specific Metas
+  ================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<!-- CSS
+  ================================================== -->
+<link rel="stylesheet" href="https://www.square-brussels.com/templates/square/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://www.square-brussels.com/templates/square/css/flexslider.css">
+<link rel="stylesheet" href="https://www.square-brussels.com/templates/square/css/jquery.mCustomScrollbar.css">
+<link rel="stylesheet" href="https://www.square-brussels.com/templates/square/css/font-awesome.css">
+<link rel="stylesheet" href="https://www.square-brussels.com/templates/square/css/main.css">
+<link rel="stylesheet" href="https://www.square-brussels.com/templates/square/css/responsive.css">
+<!-- JS
+  ================================================== -->
+<script type="text/javascript" src="https://www.square-brussels.com/templates/square/js/jquery.flexslider.js"></script>
+<script type="text/javascript" src="https://www.square-brussels.com/templates/square/js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="https://www.square-brussels.com/templates/square/js/isotope.pkgd.min.js"></script>
+<script type="text/javascript" src="https://www.square-brussels.com/templates/square/js/pace.min.js"></script>
+<script type="text/javascript" src="https://www.square-brussels.com/templates/square/js/custom-select.js"></script>
+<script type="text/javascript" src="https://www.square-brussels.com/templates/square/js/jquery.mCustomScrollbar.min.js"></script>
+<script type="text/javascript" src="https://www.square-brussels.com/templates/square/js/main.js"></script>
+<script type="text/javascript" src="https://www.square-brussels.com/templates/square/js/jquery.validate.min.js"></script> 
+<script src="//assets.adobedtm.com/c876840ac68fc41c08a580a3fb1869c51ca83380/satelliteLib-f0678302f13c1acc28c327d87bde5f9ca9710714.js"></script>
+<!--[if lt IE 9]>
+		<script src="https://www.square-brussels.com/templates/square/js/html5.js"></script>
+<![endif]-->
+
+<script src="https://use.typekit.net/bsz2iyk.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5N7N768');
+</script>
+
+</head>
+
+<body class="wsite-en">
+<div class="transition-mask"></div>
+<div class="square-loader">
+    <span></span>
+    <span></span>
+    <span></span>
+	<div>BRUSSELS CONVENTION CENTRE
+</div>
+</div>
+<div id="sqare-site-wrap">
+	<header class="inner-header">
+    	<div class="container">
+        	<h1 class="logo"><a href="https://www.square-brussels.com/en"><img src="https://www.square-brussels.com/templates/square/images/logo/logo-en.svg"></a></h1>
+            <div class="header-top">
+                <a href="#" id="menu-trigger"><span class="menu-svg"></span></a>
+                
+                <div id="primary-nav-wrap">
+                	<div class="container">
+                    	<h1 class="logo"><a href="https://www.square-brussels.com/en"><img src="https://www.square-brussels.com/templates/square/images/logo/logo-en-menu.svg"></a></h1>
+						<ul class="nav menu" id="primary-nav">
+<li class="item-216 default"><span class="mask">Homepage</span><a href="/en/" >Homepage</a></li><li class="item-101 deeper parent"><span class="mask">Explore SQUARE </span><a href="/en/explore-square/inside-square.html" >Explore SQUARE </a><ul class="nav-child unstyled small"><li class="item-102"><span class="mask">Inside SQUARE</span><a href="/en/explore-square/inside-square.html" >Inside SQUARE</a></li><li class="item-103"><span class="mask">Plan your event</span><a href="/en/explore-square/plan-your-event.html" >Plan your event</a></li><li class="item-104 parent"><span class="mask">Services</span><a href="/en/explore-square/services.html" >Services</a></li></ul></li><li class="item-111 deeper parent"><span class="mask">Discover Brussels</span><a href="/en/discover-brussels/the-city.html" >Discover Brussels</a><ul class="nav-child unstyled small"><li class="item-112"><span class="mask">About the city</span><a href="/en/discover-brussels/the-city.html" >About the city</a></li><li class="item-117"><span class="mask">Accommodation</span><a href="/en/discover-brussels/accommodation.html" >Accommodation</a></li></ul></li><li class="item-136 deeper parent"><span class="mask">About us</span><a href="/en/about-us/square-is.html" >About us</a><ul class="nav-child unstyled small"><li class="item-143"><span class="mask">SQUARE is…</span><a href="/en/about-us/square-is.html" >SQUARE is…</a></li><li class="item-142"><span class="mask">Meet the team</span><a href="/en/about-us/meet-the-team.html" >Meet the team</a></li><li class="item-146"><span class="mask">Access</span><a href="/en/about-us/access.html" >Access</a></li></ul></li><li class="item-219"><span class="mask">Jobs</span><a href="/en/jobs.html" >Jobs</a></li><li class="item-110"><span class="mask">Practical information</span><a href="/en/media-library.html" >Practical information</a></li><li class="item-226"><span class="mask">News</span><a href="/en/news.html" >News</a></li><li class="item-145 current active"><span class="mask">FAQ</span><a href="/en/faq.html" >FAQ</a></li><li class="item-147"><span class="mask">Contact</span><a href="/en/contact.html" >Contact</a></li></ul>
+				     
+                        <ul class="social-links">
+                        	<!--<li><a target="_blank" href="https://twitter.com/glevents"><img src="https://www.square-brussels.com/templates/square/images/share-twitter.png"></a></li>-->
+                            <li><!--noindex--><a target="_blank" href="https://www.facebook.com/Square-Brussels-Meeting-Centre-234918826526184/?fref=ts" class="external-link" rel="nofollow noopener" ><img src="https://www.square-brussels.com/templates/square/images/share-facebook.png"></a><!--/noindex--></li>
+                            <li><!--noindex--><a target="_blank" href="https://www.linkedin.com/company-beta/461885/" class="external-link" rel="nofollow noopener" ><img src="https://www.square-brussels.com/templates/square/images/share-linkedin.png"></a><!--/noindex--></li>
+                            <li><!--noindex--><a target="_blank" href="https://www.youtube.com/channel/UC9dL1JC1-zlpkRM7wdfVpTQ" class="external-link" rel="nofollow noopener" ><img src="https://www.square-brussels.com/templates/square/images/share-youtube.png"></a><!--/noindex--></li>
+                            <!--<li><a target="_blank" href="http://instagram.com"><img src="https://www.square-brussels.com/templates/square/images/share-instagram.png"></a></li>-->
+                        </ul>
+						 
+                        <div class="search-wrap">
+							<div class="search">
+	<form action="/en/faq.html" method="post" class="form-inline">
+		<input value="" name="searchword" id="mod-search-searchword" maxlength="200"  class="inputbox search-query" type="search" placeholder="Search" /><input type="submit" value="" onclick="this.form.submit();">		<input type="hidden" name="task" value="search" />
+		<input type="hidden" name="option" value="com_search" />
+		<input type="hidden" name="Itemid" value="106" />
+	</form>
+</div>
+                        	 
+                        </div>
+                        <div class="menu-btn-clear">
+			   
+                            <a href="https://www.square-brussels.com/en/explore-square/plan-your-event.html" class="btn btn-menu">Plan your event</a>
+                            <a href="/en/media-library.html" class="btn btn-menu">Practical information</a>
+                        </div>
+                    </div>
+                </div><!--Primary-nav-wrap-->
+                
+            	<ul id="top-nav">
+                	<li><a href="/en/media-library.html">Practical information</a></li>
+                    <!--<li><a href="/"></a></li>-->
+                    <li><div class="mod-languages">
+
+	<form name="lang" method="post" action="https://www.square-brussels.com/en/faq.html">
+	<div data-select-box class="custom-select-box">
+    <select class="inputbox advancedSelect" onchange="document.location.replace(this.value);" >
+									<option dir="ltr" value="/en/faq.html" selected="selected">
+		English</option>
+									<option dir="ltr" value="/fr/faq.html" >
+		Français</option>
+									<option dir="ltr" value="/nl/faq.html" >
+		Nederlands</option>
+		</select>
+    </div>
+	</form>
+
+</div>
+</li>
+                </ul>
+				
+			   <div class="search-wrap-homepage">
+				  <div class="search">
+	<form action="/en/faq.html" method="post" class="form-inline">
+		<input value="" name="searchword" id="mod-search-searchword" maxlength="200"  class="inputbox search-query" type="search" placeholder="Search" /><input type="submit" value="" onclick="this.form.submit();">		<input type="hidden" name="task" value="search" />
+		<input type="hidden" name="option" value="com_search" />
+		<input type="hidden" name="Itemid" value="106" />
+	</form>
+</div>
+                        	 
+			   </div>
+              <a href="https://www.square-brussels.com/en/explore-square/plan-your-event.html" class="btn btn-white plan-event">Plan your event</a>
+            </div><!--header top-->
+      </div><!--Container-->
+    </header>
+	
+	 
+<div id="article-banner">
+							<img src="https://www.square-brussels.com/images/banner/banner-inner-page-faq.jpg" alt="">					<div class="banner-desc">
+						<h1>FAQ</h1>
+					</div>
+</div><!--Article banner-->
+<section class="inner-page">  	
+	<div class="container">
+	   <div id="system-message-container">
+	</div>
+
+	   
+<div class="faq-wrap">
+	    <h1>Search for answers to common questions</h1>
+	    	    
+	<div class="search-wrap">
+		
+		
+	    <input type="text" placeholder="Questions" id="search_faq">
+	    <input type="submit" value="" id="search_btn">
+	</div>
+		
+	    
+		<ul class="faq_list">
+				
+				<li>
+				    <h2>Are the truss in Grand Hall 2 included in the hire of the space?</h2>
+				    <div class="answers">
+					<p>No</p>				    </div>
+				</li>
+				
+				<li>
+				    <h2>Can I use my own caterers?  </h2>
+				    <div class="answers">
+					<p>Unfortunately not; we invite you to go through our caterers, SQUARE GUSTO.</p>				    </div>
+				</li>
+				
+				<li>
+				    <h2>Do I have to take out insurance? </h2>
+				    <div class="answers">
+					<p>Whether you are a company, an event agency or just an individual wishing to organise an event, you must have civil liability insurance.</p>				    </div>
+				</li>
+				
+				<li>
+				    <h2>Do you have Internet/wifi access available for event organisers and visitors?</h2>
+				    <div class="answers">
+					<p>Yes, we have an Internet access which can go up 1000Mbps, (for upload and download) covering all the buildings of SQUARE.</p>				    </div>
+				</li>
+				
+				<li>
+				    <h2>Do you provide Wi-Fi access for visitors to SQUARE?</h2>
+				    <div class="answers">
+					<p>We can provide an access around the Cube and also in the BOZAR room.</p>				    </div>
+				</li>
+				
+				<li>
+				    <h2>Does SQUARE rent technical equipment?</h2>
+				    <div class="answers">
+					<p>We can provide different technical equipment such as printers, copiers, laptops, copy machines, voting equipment, etc.</p>				    </div>
+				</li>
+				
+				<li>
+				    <h2>How many spaces are there in the parking Albertine?</h2>
+				    <div class="answers">
+					<ul>
+<li>Total number of spaces: 714</li>
+<li>Spaces for people with reduced mobility: 14</li>
+<li>Maximum height: 2m</li>
+</ul>				    </div>
+				</li>
+				
+				<li>
+				    <h2>Is it possible to reserve a parking space for my event?</h2>
+				    <div class="answers">
+					<p>We suggest that you reserve tickets directly <!--noindex--><a href="http://prod.interparking.be/fr-BE/find-parking/Albertine-Square/" class="external-link --set-title" target="_blank" title="through this address" rel="nofollow noopener" >through this address</a><!--/noindex-->.</p>				    </div>
+				</li>
+				
+				<li>
+				    <h2>Is there parking available?</h2>
+				    <div class="answers">
+					<p>Yes, there is a public car park, <em>ALBERTINE</em> which provides direct access to the SQUARE.</p>				    </div>
+				</li>
+				
+				<li>
+				    <h2>What do the event management fees relate to? </h2>
+				    <div class="answers">
+					<p>These fees cover administrative management as well as the presence of our coordinator at your event, from assembly to disassembly.</p>				    </div>
+				</li>
+				
+				<li>
+				    <h2>What is included in the room rental? </h2>
+				    <div class="answers">
+					<p>The following services are included in the room rental: cleaning before and after the event, rental of the room itself, heating and air-conditioning.</p>				    </div>
+				</li>
+				
+				<li>
+				    <h2>What is the delivery address? </h2>
+				    <div class="answers">
+					<p>Please contact our supplier directly <!--noindex--><a href="http://www.zieglergroup.com/websites/zieglerw.nsf/pages/9B32B9FA7E393B09C125783A002FEEC1?Opendocument" class="external-link --set-title" target="_blank" title="at this address" rel="nofollow noopener" >at this address</a><!--/noindex-->.</p>				    </div>
+				</li>
+				
+				<li>
+				    <h2>What services do you offer? </h2>
+				    <div class="answers">
+					<p>For more information regarding our services, <a href="/en/explore-square/services.html">please refer to the Services page</a>.</p>				    </div>
+				</li>
+				
+				<li>
+				    <h2>Which digital services do you offer?</h2>
+				    <div class="answers">
+					<p>We can provide the following services:</p>
+<ul>
+<li style="margin-left: 60px;">Live streaming which can be hosted on your website or else we can create a dedicated website for you,</li>
+<li style="margin-left: 60px;">ePoster solutions,</li>
+<li style="margin-left: 60px;">Web applications with several possibilities such as agenda, polling, map of event, etc.,</li>
+<li style="margin-left: 60px;">Digital signage,</li>
+<li style="margin-left: 60px;">Badges and registration solutions.</li>
+</ul>				    </div>
+				</li>
+				
+				<li>
+				    <h2>Which service/(s) is/are compulsory? </h2>
+				    <div class="answers">
+					<p>The rooms inevitably include security staff and cleaning staff during your event (foreseen additional costs).</p>
+<p>The use of audiovisual equipment is not included in the cost of hiring the space</p>				    </div>
+				</li>
+				
+				<li>
+				    <h2>Why is there a need for so much security?  </h2>
+				    <div class="answers">
+					<p>These security measures make sure that you and your attendees are safe and reassured. They also guarantee efficient evacuation in an emergency as well as allowing the emergency services to reach the scene if required.<br />These measures guarantee the success of your events.</p>				    </div>
+				</li>
+					
+		</ul>		
+		
+    </div>
+ 
+
+<script>
+jQuery(document).ready(function() {
+	jQuery("ul.faq_list > li h2").click(function(){
+		jQuery('ul.faq_list > li h2').removeClass('active');jQuery('ul.faq_list > li .answers').slideUp();
+		jQuery(this).toggleClass('active');
+		
+		if ( jQuery(this).next(".answers").is(":visible") ) {
+		jQuery(this).next(".answers").slideUp();jQuery('ul.faq_list > li h2').removeClass('active');	
+		}
+		else
+		jQuery(this).next(".answers").slideDown();
+	});
+	
+	jQuery('#search_faq').bind( "keypress keyup", function() {
+		var searchtxt = jQuery(this).val().toLowerCase();
+		if (searchtxt) 
+			jQuery('#search_btn').addClass('close');	
+		else
+			jQuery('#search_btn').removeClass('close');
+		
+			jQuery('ul.faq_list > li').hide();		
+			var items = jQuery('ul.faq_list > li');	    
+			jQuery.each(items,function(index, node){				    
+				  var heading = jQuery(node).find("h2").text().toLowerCase();
+				  var answer = jQuery(node).find(".answers").text().toLowerCase();
+				  
+				  if ( heading.toLowerCase().indexOf(searchtxt) >= 0  || answer.toLowerCase().indexOf(searchtxt) >= 0 ){
+					   jQuery(node).closest('li').css("display","block");
+				    }
+			})	
+	});
+	jQuery("#search_btn").click(function(){		
+		jQuery('#search_faq').val('');
+		jQuery('#search_faq').trigger('keypress');
+	});	
+});
+</script> 
+
+
+
+
+
+
+ 
+	</div><!--Container-->    
+</section>
+	
+    
+    
+	
+    <footer>
+    	<div class="container">
+        	<div class="row">
+            	<div class="col-md-4">
+				  <h2>Stay connected</h2>
+<form name="subscriptionForm" id="subscriptionForm" method="POST">
+<div class="subscribe-newsletter">
+	<label class="retmessage">Register for our newsletter</label>
+	<span>Register for our newsletter</span>
+	<input type="text" name="email" id="email" placeholder="">
+	<input type="submit" id="submit_btn" value="Go"></div>
+</form>
+<span class="subscibe-text">We'll send you information about our events, services, special offers and more.</span>
+<script>
+	jQuery(document).ready(function() {
+		/* subscribe newsletter validate Starts  */
+		jQuery("#subscriptionForm").validate({	 
+			rules: {                    
+				email: {
+					  required: true,
+					  email: true
+				}
+			  },               
+			messages: {
+				  email: ""			  	
+			  },	  
+			submitHandler: function(form) {	
+				jQuery.post('index.php?option=com_newsletter&task=newsletter.saveSubscriber', jQuery("#subscriptionForm").serialize(), function(data) {
+				  jQuery('#email').val('');
+				  if (data =="2") {				    		   
+						jQuery('.retmessage').text('Thank you for subscribing the newsletter');			
+				  } else if(data=="1"){
+					  jQuery('.retmessage').text('You have already subscribed the newsletter');
+				  }  else{
+						jQuery('.retmessage').text('Unable to process your request. Please try later.');
+				  }				  
+				});
+					
+			}	
+		  });
+		/* subscribe newsletter validate Ends  */	
+	});
+</script>                	
+                    	<ul class="social-links" >
+                        	                            <li><!--noindex--><a target="_blank" href="https://www.facebook.com/Square-Brussels-Meeting-Centre-234918826526184/?fref=ts" class="external-link" rel="nofollow noopener" ><img src="https://www.square-brussels.com/templates/square/images/share-facebook-ft.png"></a><!--/noindex--></li>
+                            <li><!--noindex--><a target="_blank" href="https://www.linkedin.com/company-beta/461885/" class="external-link" rel="nofollow noopener" ><img src="https://www.square-brussels.com/templates/square/images/share-linkedin-ft.png"></a><!--/noindex--></li>
+                            <li><!--noindex--><a target="_blank" href="https://www.youtube.com/channel/UC9dL1JC1-zlpkRM7wdfVpTQ" class="external-link" rel="nofollow noopener" ><img src="https://www.square-brussels.com/templates/square/images/share-youtube-ft.png"></a><!--/noindex--></li>
+                                              	</ul>	
+                      	<div class="logo-partners">                      		
+                      		<h2>SQUARE is a part of</h2>
+                      		<!--noindex--><a href="http://www.aipc.org/" target="_blank" class="external-link" rel="nofollow noopener" ><img src="https://www.square-brussels.com/templates/square/images/aipc-logo.png"></a><!--/noindex-->
+                      		                      		<!--noindex--><a href="http://www.iccaworld.org/" target="_blank" class="external-link" rel="nofollow noopener" ><img src="https://www.square-brussels.com/templates/square/images/icca-logo.png"></a><!--/noindex-->
+							<!--noindex--><a href="https://www.pcma.org/" target="_blank" class="external-link" rel="nofollow noopener" ><img src="https://www.square-brussels.com/templates/square/images/pcma.png"></a><!--/noindex-->
+                     		<!--noindex--><a href="https://www.beci.be/" target="_blank" class="external-link" rel="nofollow noopener" ><img src="https://www.square-brussels.com/templates/square/images/beci.png"></a><!--/noindex-->
+                     		<!--noindex--><a href="http://www.venues.be/fr_BE/" target="_blank" class="external-link" rel="nofollow noopener" ><img src="https://www.square-brussels.com/templates/square/images/bsv.png"></a><!--/noindex-->
+                     		<!--noindex--><a href="https://www.febelux.com" target="_blank" class="external-link" rel="nofollow noopener" ><img src="https://www.square-brussels.com/templates/square/images/febelux.png"></a><!--/noindex-->
+                     		<!--noindex--><a href="https://www.voka.be/" target="_blank" class="external-link" rel="nofollow noopener" ><img src="https://www.square-brussels.com/templates/square/images/voka.png"></a><!--/noindex-->
+                      	</div>
+                </div><!--Col-md-4-->
+                
+                <div class="col-md-3">
+                	<h2>Links</h2>
+					
+			<ul class="nav menu ftr-links" id="ftr-links">
+<li class="item-216 default"><span class="mask">Homepage</span><a href="/en/" >Homepage</a></li><li class="item-101 parent"><span class="mask">Explore SQUARE </span><a href="/en/explore-square/inside-square.html" >Explore SQUARE </a></li><li class="item-111 parent"><span class="mask">Discover Brussels</span><a href="/en/discover-brussels/the-city.html" >Discover Brussels</a></li><li class="item-136 parent"><span class="mask">About us</span><a href="/en/about-us/square-is.html" >About us</a></li><li class="item-219"><span class="mask">Jobs</span><a href="/en/jobs.html" >Jobs</a></li><li class="item-110"><span class="mask">Practical information</span><a href="/en/media-library.html" >Practical information</a></li><li class="item-226"><span class="mask">News</span><a href="/en/news.html" >News</a></li><li class="item-145 current active"><span class="mask">FAQ</span><a href="/en/faq.html" >FAQ</a></li><li class="item-147"><span class="mask">Contact</span><a href="/en/contact.html" >Contact</a></li></ul>
+
+                	 
+                    
+                </div><!--Col-md-3-->
+                <div class="col-md-2">
+                	<h2 class="square-ft-text"></h2>
+					  <div class="address">
+    Glass Entrance<br />
+Mont des Arts/Kunstberg <br />
+B-1000 Brussels<br><br>
+            +32 2 515 13 00<br>
+                <a href="mailto:info@square-brussels.com">info@square-brussels.com</a>
+      </div>
+                 	
+                    <h2>Reach us</h2>
+                    <div class="ft-reach-us">
+                    	<p>Travelling to SQUARE is easy</p>
+                        <ul>
+                        	<li><a href="https://www.square-brussels.com/en/about-us/access.html#car"><img src="https://www.square-brussels.com/templates/square/images/ft-access-1.png"></a></li>
+                            <li><a href="https://www.square-brussels.com/en/about-us/access.html#flight"><img src="https://www.square-brussels.com/templates/square/images/ft-access-2.png"></a></li>
+                            <li><a href="https://www.square-brussels.com/en/about-us/access.html#train"><img src="https://www.square-brussels.com/templates/square/images/ft-access-3.png"></a></li>
+                            <li><a href="https://www.square-brussels.com/en/about-us/access.html#cycle"><img src="https://www.square-brussels.com/templates/square/images/ft-access-4.png"></a></li>
+                            <li><a href="https://www.square-brussels.com/en/about-us/access.html#walk"><img src="https://www.square-brussels.com/templates/square/images/ft-access-5.png"></a></li>
+                        </ul>
+                    </div>
+                    
+                </div><!--Col-md-2-->
+                
+                <div class="col-md-3">
+                	<div class="ftr-promo-banner">
+                    	<!--noindex--><a target="_blank" href="http://www.gl-events.com/homepage" class="external-link" rel="nofollow noopener" ><img src="https://www.square-brussels.com/templates/square/images/ft-ext-1.png"></a><!--/noindex-->
+                        <a href="https://www.square-brussels.com/en/about-us/square-is.html"><img src="https://www.square-brussels.com/templates/square/images/ft-ext-2.png"></a>
+                        <a href="https://www.square-brussels.com/en/about-us/our-story.html"><img src="https://www.square-brussels.com/templates/square/images/ft-ext-3.png"></a>
+                    </div>
+                    
+                    
+                    <span class="copyright">
+                    	<span class="misc-links"><a href="https://www.square-brussels.com/en/disclaimer.html">Disclaimer</a>   <a href="https://www.square-brussels.com/en/sitemap.html">Sitemap</a></span>
+                    	Copyright © 2019 GL events Brussels
+                    </span>
+                    
+                    <a href="http://www.karakas.be" target="_blank" class="websiteby">Website by</a>
+                    
+                </div><!--Col-md-3-->
+                
+            </div><!--Row-->
+        </div><!--Container-->
+    </footer>
+
+</div>
+<!--Square  Wrap-->
+	
+<div id="square-60">
+	<a class="wrap-60" href="https://square-brussels.com/news/17:square-60th-anniversary.html"><img src="https://www.square-brussels.com/templates/square/images/square-60.jpg"></a>
+	<a href="#" class="close-60"></a>
+</div><!--square-60-POPUP-4269-->	
+
+<script>
+jQuery( document ).ready(function() {
+
+	(function($){
+		$.cookieBar = function(options,val){
+			if(options=='cookies'){
+				var doReturn = 'cookies';
+			}else if(options=='set'){
+				var doReturn = 'set';
+			}else{
+				var doReturn = false;
+			}
+			var defaults = {
+				message: 'I accept cookies from this site.', //Message displayed on bar
+				acceptButton: true, //Set to true to show accept/enable button
+				acceptText: 'Agree', //Text on accept/enable button
+				acceptFunction: function(cookieValue){if(cookieValue!='enabled' && cookieValue!='accepted') window.location = window.location.href;}, //Function to run after accept
+				declineButton: false, //Set to true to show decline/disable button
+				declineText: 'Disable Cookies', //Text on decline/disable button
+				declineFunction: function(cookieValue){if(cookieValue=='enabled' || cookieValue=='accepted') window.location = window.location.href;}, //Function to run after decline
+				policyButton: true, //Set to true to show Privacy Policy button
+				policyText: 'Read more about our policy privacy', //Text on Privacy Policy button
+				policyMessage: 'We use cookies to ensure you get the best experience on our website.', //Text on Privacy Policy message
+				policyURL: 'disclaimer.html', //URL of Privacy Policy
+				autoEnable: true, //Set to true for cookies to be accepted automatically. Banner still shows
+				acceptOnContinue: false, //Set to true to accept cookies when visitor moves to another page
+				acceptOnScroll: false, //Set to true to accept cookies when visitor scrolls X pixels up or down
+				acceptAnyClick: false, //Set to true to accept cookies when visitor clicks anywhere on the page
+				expireDays: 365, //Number of days for cookieBar cookie to be stored for
+				renewOnVisit: false, //Renew the cookie upon revisit to website
+				forceShow: false, //Force cookieBar to show regardless of user cookie preference
+				effect: 'slide', //Options: slide, fade, hide
+				element: 'body', //Element to append/prepend cookieBar to. Remember "." for class or "#" for id.
+				append: true, //Set to true for cookieBar HTML to be placed at base of website. Actual position may change according to CSS
+				fixed: true, //Set to true to add the class "fixed" to the cookie bar. Default CSS should fix the position
+				bottom: true, //Force CSS when fixed, so bar appears at bottom of website
+				zindex: '', //Can be set in CSS, although some may prefer to set here
+				domain: String(window.location.hostname), //Location of privacy policy
+				referrer: String(document.referrer) //Where visitor has come from
+			};
+			var options = $.extend(defaults,options);
+			
+			//Sets expiration date for cookie
+			var expireDate = new Date();
+			expireDate.setTime(expireDate.getTime()+(options.expireDays*86400000));
+			expireDate = expireDate.toGMTString();
+			
+			var cookieEntry = 'cb-enabled={value}; expires='+expireDate+'; path=/';
+			
+			//Retrieves current cookie preference
+			var i,cookieValue='',aCookie,aCookies=document.cookie.split('; ');
+			for (i=0;i<aCookies.length;i++){
+				aCookie = aCookies[i].split('=');
+				if(aCookie[0]=='cb-enabled'){
+				cookieValue = aCookie[1];
+				}
+			}
+			//Sets up default cookie preference if not already set
+			if(cookieValue=='' && doReturn!='cookies' && options.autoEnable){
+				cookieValue = 'enabled';
+				document.cookie = cookieEntry.replace('{value}','enabled');
+			}else if((cookieValue=='accepted' || cookieValue=='declined') && doReturn!='cookies' && options.renewOnVisit){
+				document.cookie = cookieEntry.replace('{value}',cookieValue);
+			}
+			if(options.acceptOnContinue){
+				if(options.referrer.indexOf(options.domain)>=0 && String(window.location.href).indexOf(options.policyURL)==-1 && doReturn!='cookies' && doReturn!='set' && cookieValue!='accepted' && cookieValue!='declined'){
+					doReturn = 'set';
+					val = 'accepted';
+				}
+			}
+			if(doReturn=='cookies'){
+				//Returns true if cookies are enabled, false otherwise
+				if(cookieValue=='enabled' || cookieValue=='accepted'){
+					return true;
+				}else{
+					return false;
+				}
+			}else if(doReturn=='set' && (val=='accepted' || val=='declined')){
+				//Sets value of cookie to 'accepted' or 'declined'
+				document.cookie = cookieEntry.replace('{value}',val);
+				if(val=='accepted'){
+					return true;
+				}else{
+					return false;
+				}
+			}else{
+				//Sets up enable/accept button if required
+				var message = options.message.replace('{policy_url}',options.policyURL);
+				
+				if(options.acceptButton){
+					var acceptButton = ' <a href="/" class="cb-enable btn">'+options.acceptText+'</a>';
+				}else{
+					var acceptButton = '';
+				}
+				//Sets up disable/decline button if required
+				if(options.declineButton){
+					var declineButton = ' <a href="/" class="cb-disable">'+options.declineText+'</a>';
+				}else{
+					var declineButton = '';
+				}
+				//Sets up privacy policy button if required
+				if(options.policyButton){
+					var policyButton = options.policyMessage+' <a href="'+options.policyURL+'" class="cb-policy">'+options.policyText+'</a>';
+				}else{
+					var policyButton = options.policyMessage;
+				}
+				//Whether to add "fixed" class to cookie bar
+				if(options.fixed){
+					if(options.bottom){
+						var fixed = ' class="fixed bottom"';
+					}else{
+						var fixed = ' class="fixed"';
+					}
+				}else{
+					var fixed = '';
+				}
+				if(options.zindex!=''){
+					var zindex = ' style="z-index:'+options.zindex+';"';
+				}else{
+					var zindex = '';
+				}
+				
+				//Displays the cookie bar if arguments met
+				if(options.forceShow || cookieValue=='enabled' || cookieValue==''){
+					if(options.append){
+						$(options.element).append('<div id="cookie-bar"'+fixed+zindex+'><span><p>'+policyButton+'</p></span><span>'+message+acceptButton+declineButton+'</span></div>');
+					}else{
+						$(options.element).prepend('<div id="cookie-bar"'+fixed+zindex+'><span><p>'+policyButton+'</p></span><span>'+message+acceptButton+declineButton+'</span></div>');
+					}
+				}
+				
+				var removeBar = function(func){
+					if(options.acceptOnScroll) $(document).off('scroll');
+					if(typeof(func)==='function') func(cookieValue);
+					if(options.effect=='slide'){
+						$('#cookie-bar').slideUp(300,function(){$('#cookie-bar').remove();});
+					}else if(options.effect=='fade'){
+						$('#cookie-bar').fadeOut(300,function(){$('#cookie-bar').remove();});
+					}else{
+						$('#cookie-bar').hide(0,function(){$('#cookie-bar').remove();});
+					}
+					$(document).unbind('click',anyClick);
+				};
+				var cookieAccept = function(){
+					document.cookie = cookieEntry.replace('{value}','accepted');
+					removeBar(options.acceptFunction);
+				};
+				var cookieDecline = function(){
+					var deleteDate = new Date();
+					deleteDate.setTime(deleteDate.getTime()-(864000000));
+					deleteDate = deleteDate.toGMTString();
+					aCookies=document.cookie.split('; ');
+					for (i=0;i<aCookies.length;i++){
+						aCookie = aCookies[i].split('=');
+						if(aCookie[0].indexOf('_')>=0){
+							document.cookie = aCookie[0]+'=0; expires='+deleteDate+'; domain='+options.domain.replace('www','')+'; path=/';
+						}else{
+							document.cookie = aCookie[0]+'=0; expires='+deleteDate+'; path=/';
+						}
+					}
+					document.cookie = cookieEntry.replace('{value}','declined');
+					removeBar(options.declineFunction);
+				};
+				var anyClick = function(e){
+					if(!$(e.target).hasClass('cb-policy')) cookieAccept();
+				};
+				
+				$('#cookie-bar .cb-enable').click(function(){cookieAccept();return false;});
+				$('#cookie-bar .cb-disable').click(function(){cookieDecline();return false;});
+				if(options.acceptOnScroll){
+					var scrollStart = $(document).scrollTop(),scrollNew,scrollDiff;
+					$(document).on('scroll',function(){
+						scrollNew = $(document).scrollTop();
+						if(scrollNew>scrollStart){
+							scrollDiff = scrollNew - scrollStart;
+						}else{
+							scrollDiff = scrollStart - scrollNew;
+						}
+						if(scrollDiff>=Math.round(options.acceptOnScroll)) cookieAccept();
+					});
+				}
+				if(options.acceptAnyClick){
+					$(document).bind('click',anyClick);
+				}
+			}
+		};
+	})(jQuery);
+	jQuery.cookieBar(); 
+});
+</script>
+
+
+<!-- End Document
+================================================== -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-32329767-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<div style="display: none;"><script type="text/javascript">_satellite.pageBottom();</script></div>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5N7N768"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"098c39c348","applicationID":"101533240","transactionName":"MwZTMkdQDUQHVhVaCgpMcAVBWAxZSXMAQiYLDUUUWl0PUhQaBVoWFA9QHw==","queueTime":0,"applicationTime":77,"atts":"H0FQRA9KHko=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+
