@@ -26,9 +26,11 @@ h1, h2, h3, h4{
   font-size: 18px;  
 }
 h2,h3,h4{
-  font-family: 'Limelight', cursive;
-  font-size: 18px;
-  margin: 0px 0px 8px 0;    
+    font-family: 'Limelight', cursive;
+    font-size: 18px;
+    margin: 0px 0px 8px 0;
+    display: block;
+    clear: both; 
 }
 
 body{
@@ -102,6 +104,9 @@ ul.block-lists li{
 }
 #biglist li{
 font-size: 50px!important;
+}
+#skills h2{
+  padding:20px 0 5px 20px;
 }
 
 .block-lists-skills{
@@ -186,6 +191,44 @@ svg{
   height: 20px;
   fill: currentColor;
 }
+.block-lists-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.block-lists-skills li {
+  border: 2px solid #e5e4dc;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: transform 0.1s ease;
+}
+
+  .block-lists-skills li:hover {
+  border: 2px solid #d4cfa0;
+  }
+
+.skill-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+  font-weight: 500;
+}
+
+.skill-box svg {
+  width: 24px;
+  height: 24px;
+  fill: #5c5c5c; /* Or adjust to match brand */
+}
+
+.skill-box span {
+  font-size: 14px;
+}
+
 
 /*Small devices (landscape phones, 576px and up)*/
 @media only screen and (max-width: 576px) {
