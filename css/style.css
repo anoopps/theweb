@@ -152,7 +152,7 @@ ul.block-lists-contact li{
    text-transform: uppercase;   
 }
 .navbar-toggler {
-float: right;
+float: right; 
 }
 
 svg{
@@ -210,6 +210,19 @@ svg{
   .block-lists-skills li:hover {
   border: 2px solid #d4cfa0;
   }
+
+  .btn-primary {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #8a9b0f;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.btn-primary:hover {
+  background-color: #76870d;
+}
 
 .skill-box {
   display: flex;
