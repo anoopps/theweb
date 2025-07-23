@@ -1,6 +1,15 @@
-# theweb - My web developer portfolio
+# theweb - Web Developer Portfolio
 
-1. Developed using html, css, bootstrap, jQuery
-2. Created about, portfolio, skills and contact section.
+Welcome to my web developer portfolio! This project showcases my skills and experience in backedn as well as front-end development.
 
-Link : https://anoopps.github.io/theweb
+## Features
+
+- Built with HTML, CSS, Bootstrap, and jQuery
+- Includes About, Portfolio, Skills, and Contact sections
+- Responsive design for all devices
+- Interactive elements and smooth navigation
+
+## Live Demo
+
+[View the portfolio](https://anoopps.github.io/theweb)
+
