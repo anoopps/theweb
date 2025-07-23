@@ -140,7 +140,7 @@ font-size: 50px!important;
 ul.block-lists-contact{
   clear: both;
   display: block;
-   margin: 0px; padding: 0px; /*float: left;*/
+   margin: 0px; padding: 0px;
 }
 ul.block-lists-contact li{
    margin: 20px 2px 0px 0px; /*! padding: 0px; */   
