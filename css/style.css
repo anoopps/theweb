@@ -36,6 +36,7 @@ h2,h3,h4{
 body{
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
+   line-height: 1.5;
 }
 .row{
   height: auto;
@@ -73,13 +74,18 @@ p{
   height: 200px;
 
 }
+#aboutMe p {
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
 #portfolio{
 
   height: auto;
   clear: both;
   display: block;
 }
-#portfolio .col-md-6{
+ .self-driven-projects > .col-md-6{
   display: inline-block;
 margin-bottom: 15px;
 height: 150px;

@@ -17,7 +17,7 @@
     <div class="container">
         <header>
             <nav class="navbar navbar-default navbar-fixed-top">
-                <a class="navbar-brand" href="#"><strong>theWeb PORTFOLIO</strong></a>
+                <a class="navbar-brand" href="#"><h3>My PORTFOLIO</h3></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -25,7 +25,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav nav" id="navigation">
                         <li class="nav-item">
-                            <a href="#">About</a>
+                            <a href="#">AboutMe</a>
                         </li>
                         <li class="nav-item">
                             <a href="#">Portfolio</a>
@@ -51,10 +51,33 @@
                 </div>
                 <div class="col-md-6">                     
   <p>Experienced full-stack developer with a focus on LAMP, Node.js, and modern JS frameworks. I build robust, scalable, and secure web applications with clean and efficient code.</p>
-                        <a href="#" onclick="moveTo('portfolio');" class="btn-primary">View My Portfolio</a>                   
+                        <a href="#portfolio" class="btn btn-primary" data-toggle="scroll">View My Portfolio</a>
                 </div>
             </div>
-            <div class="row" id="portfolio">
+            <div class="row" id="aboutMe">
+                <div class="col-md-12">
+                    <h1>About Me</h1>
+                </div>
+               
+            <div class="col-md-8">
+
+                    <p>
+                        I’m Anoop, a full-stack web developer with over 13 years of experience building scalable and secure applications. My journey started in the LAMP stack, but I’ve since expanded into modern technologies like Node.js, GraphQL, Prisma, Sequelize.
+                    </p>
+                    <p>
+                        I enjoy solving real-world problems with clean and efficient code. Whether it's backend APIs or interactive frontend apps, I take pride in writing well-structured, maintainable solutions. I'm also continuously learning and building self-driven projects to explore new tech.
+                    </p>   
+                    
+                    <p>Apart from work, I enjoy web designing, music, and reading.</p>
+                
+                </p>                
+            </div> 
+             <div class="col-md-4">
+             <img src="images/avataaars.png" title="theWeb" alt="theWeb portfolio" width="50%">
+            </div>
+            </div>
+
+            <div class="row self-driven-projects" id="portfolio">
                 <div class="col-md-12">
                     <h1>Portfolio</h1>
                 </div>
@@ -129,7 +152,7 @@
                 </div>
             </div>
 
-            <div class="row" id="portfolio">
+            <div class="row self-driven-projects" id="portfolio">
                 <div class="col-md-12">
                     <h1>Self Driven Projects</h1>
                 </div>
@@ -163,19 +186,6 @@
 
                 <div class="col-md-6">
                     <div class="details">
-                        <h2><a href="https://github.com/anoopps/reactQuiz" target="_blank">React Quiz App – ReactJS</a>
-                        </h2>
-                        <p>An interactive quiz game application with real-time scoring</p>
-                        <ul>
-                            <li>Multiple-choice questions with result tracking.</li>
-                            <li>Simple state management using React hooks</li>
-                            <li>Mobile-first, fully responsive layout</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="details">
                         <h2><a href="https://github.com/anoopps/book-review-hub" target="_blank">Book Review Hub</a>
                         </h2>
                         <p>Book Review Hub is a RESTful API application built with Node.js, Express.js and Prisma that
@@ -184,6 +194,19 @@
                             <li>User Authentication – Secure login & registration using JWT tokens</li>
                             <li>CRUD operations for adding and managing books</li>
                             <li>Authorization Middleware – Role-based access control for routes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                 <div class="col-md-6">
+                    <div class="details">
+                        <h2><a href="https://github.com/anoopps/reactQuiz" target="_blank">React Quiz App – ReactJS</a>
+                        </h2>
+                        <p>An interactive quiz game application with real-time scoring</p>
+                        <ul>
+                            <li>Multiple-choice questions with result tracking.</li>
+                            <li>Simple state management using React hooks</li>
+                            <li>Mobile-first, fully responsive layout</li>
                         </ul>
                     </div>
                 </div>
