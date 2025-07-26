@@ -248,7 +248,10 @@ svg{
   font-size: 14px;
 }
 
-
+div#portfolio-list
+ {
+    padding-bottom: 0px;
+}
 /*Small devices (landscape phones, 576px and up)*/
 @media only screen and (max-width: 576px) {
 #maincontainer{
@@ -294,4 +297,14 @@ nav .navbar-nav {
       margin: 0 10px 20px 0;
       width: 40%;
     }
+}
+
+@media (max-width: 768px) {
+  #aboutMe {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-avatar {
+    margin-top: 20px;
+  }
 }

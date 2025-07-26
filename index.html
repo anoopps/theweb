@@ -77,82 +77,66 @@
             </div>
             </div>
 
-            <div class="row self-driven-projects" id="portfolio">
+            <div class="row" id="portfolio">
                 <div class="col-md-12">
                     <h1>Portfolio</h1>
                 </div>
-                <div class="col-md-6">
-                    <div class="details">
-                        <h2><a href="https://www.citushealth.com/" target="_blank">CitusHealth Platform – Home Infusion
-                                System</a> </h2>
-                        <p>CitusHealth is a cloud-based healthcare platform that enables real-time communication between
-                            patients, care teams, and healthcare providers, primarily in the home infusion and specialty
-                            pharmacy industry. Developed using Core PHP, GraphQL, Redis, and MySQL.</p>
-                        </p>
-                    </div>
+                <div id="portfolio-list" class="row self-driven-projects"></div>
+                <script>
+                    const portfolioItems = [
+                        {
+                            title: "CitusHealth Platform – Home Infusion System",
+                            url: "https://www.citushealth.com/",
+                            desc: "CitusHealth is a cloud-based healthcare platform that enables real-time communication between patients, care teams, and healthcare providers, primarily in the home infusion and specialty pharmacy industry. Developed using Core PHP, GraphQL, Redis, and MySQL."
+                        },
+                        {
+                            title: "Vichsec",
+                            url: "https://www.vichsec.org/",
+                            desc: "VICH is web portal developed in joomla, which is aimed at harmonizing technical requirements for veterinary product registration. Developed a multilingual version of the site with member access."
+                        },
+                        {
+                            title: "Healthforanimals.org",
+                            url: "https://healthforanimals.org/",
+                            desc: "Website developed for international federation of animal health which focuses on medicines, vaccines and animal health products. The public section of site features news, events, story and other resources."
+                        },
+                        {
+                            title: "Centr.org",
+                            url: "http://centr.org/",
+                            desc: "Centr is developed for European domain registries with public and members section with features like events, news, libraries and user survey. This web portal has both public and member access sections developed in joomla"
+                        },
+                        {
+                            title: "Idf.org",
+                            url: "https://idf.org/",
+                            desc: "Idf.org is an organization web site developed in joomla, with lot of features. Publish diabetes stories, news ,library, partner sections, publications. Dedicated survey page over 25 different languages."
+                        },
+                        {
+                            title: "Frucom.eu",
+                            url: "http://frucom.eu/",
+                            desc: "Frucom.eu is a web site developed in joomla for representative body of European traders in dried fruit & nuts, processed seafood and fruits. Integrated with user registration, news, teams, member access section."
+                        }
+                    ];
 
-                </div>
-                <div class="col-md-6">
-                    <div class="details">
-                        <h2><a href="https://www.vichsec.org/" target="_blank">Vichsec</a> </h2>
-                        <p>VICH is web portal developed in joomla, which is aimed at harmonizing technical requirements
-                            for veterinary product registration.
-                            Developed a multilingual version of the site with member access.
-                        </p>
-                    </div>
-                </div>
+                    function renderPortfolio(items) {
+                        const container = document.getElementById('portfolio-list');
+                        let html = '';
+                        items.forEach(item => {
+                            html += `
+                            <div class="col-md-6">
+                                <div class="details">
+                                    <h2><a href="${item.url}" target="_blank">${item.title}</a></h2>
+                                    <p>${item.desc}</p>
+                                </div>
+                            </div>
+                            `;
+                        });
+                        container.innerHTML = html;
+                    }
 
-
-                <div class="col-md-6">
-
-                    <div class="details">
-                        <h2> <a href="https://healthforanimals.org/" target="_blank">Healthforanimals.org</a></h2>
-                        <p>Website developed for international federation of animal health which focuses on medicines,
-                            vaccines and animal health products. The public section of site features news, events, story
-                            and other resources.
-                        </p>
-                    </div>
-
-                </div>
-                <div class="col-md-6">
-
-                    <div class="details">
-                        <h2><a href="http://centr.org/" target="_blank">Centr.org</a></h2>
-                        <p>Centr is developed for European domain registries with public and members section with
-                            features like events, news, libraries and user survey.
-                            This web portal has both public and member access sections developed in joomla
-
-                        </p>
-
-
-                    </div>
-
-                </div>
-                <div class="col-md-6">
-
-                    <div class="details">
-                        <h2><a href="https://idf.org/" target="_blank">Idf.org</a></h2>
-                        <p>Idf.org is an organization web site developed in joomla, with lot of features.
-                            Publish diabetes stories, news ,library, partner sections, publications
-                            Dedicated survey page over 25 different languages.
-                        </p>
-
-
-                    </div>
-
-                </div>
-                <div class="col-md-6">
-                    <div class="details">
-                        <h2> <a href="http://frucom.eu/" target="_blank">Frucom.eu</a></h2>
-                        <p>Frucom.eu is a web site developed in joomla for representative body of European traders in
-                            dried fruit & nuts, processed seafood and fruits
-                            Integrated with user registration, news, teams, member access section.
-                        </p>
-                    </div>
-                </div>
+                    renderPortfolio(portfolioItems);
+                </script>
             </div>
 
-            <div class="row self-driven-projects" id="portfolio">
+            <div class="row self-driven-projects" id="portfolio2">
                 <div class="col-md-12">
                     <h1>Self Driven Projects</h1>
                 </div>
