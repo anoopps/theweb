@@ -17,7 +17,8 @@
     <div class="container">
         <header>
             <nav class="navbar navbar-default navbar-fixed-top">
-                <a class="navbar-brand" href="#"><h3>My PORTFOLIO</h3></a>
+                <a class="navbar-brand" href="#"><h3></h3></a>
+                
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                     aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -45,6 +46,7 @@
             <div class="row" id="theweb">
                 <div class="col-md-12">
                     <h1>I'm Anoop</h1>
+                    <div id="typewriter" style="height: 20px;"></div>
                 </div>
                 <div class="col-md-6">
                      <img src="images/Data extraction-pana.png" title="theWeb" alt="theWeb portfolio" style="width: 100%;">
@@ -87,32 +89,38 @@
                         {
                             title: "CitusHealth Platform – Home Infusion System",
                             url: "https://www.citushealth.com/",
-                            desc: "CitusHealth is a cloud-based healthcare platform that enables real-time communication between patients, care teams, and healthcare providers, primarily in the home infusion and specialty pharmacy industry. Developed using Core PHP, GraphQL, Redis, and MySQL."
+                            desc: "CitusHealth is a cloud-based healthcare platform that enables real-time communication between patients, care teams, and healthcare providers, primarily in the home infusion and specialty pharmacy industry. Developed using Core PHP, GraphQL, Redis, and MySQL.",
+                            tech:" Core PHP, GraphQL, Node, Express, Redis, MySQL"
                         },
                         {
                             title: "Vichsec",
                             url: "https://www.vichsec.org/",
-                            desc: "VICH is web portal developed in joomla, which is aimed at harmonizing technical requirements for veterinary product registration. Developed a multilingual version of the site with member access."
+                            desc: "VICH is web portal developed in joomla, which is aimed at harmonizing technical requirements for veterinary product registration. Developed a multilingual version of the site with member access.",
+                            tech: "Joomla, PHP, MySQL, JavaScript, jQuery"
                         },
                         {
                             title: "Healthforanimals.org",
                             url: "https://healthforanimals.org/",
-                            desc: "Website developed for international federation of animal health which focuses on medicines, vaccines and animal health products. The public section of site features news, events, story and other resources."
+                            desc: "Website developed for international federation of animal health which focuses on medicines, vaccines and animal health products. The public section of site features news, events, story and other resources.",
+                            tech: "Joomla, PHP, MySQL, JavaScript, jQuery"
                         },
                         {
                             title: "Centr.org",
                             url: "http://centr.org/",
-                            desc: "Centr is developed for European domain registries with public and members section with features like events, news, libraries and user survey. This web portal has both public and member access sections developed in joomla"
+                            desc: "Centr is developed for European domain registries with public and members section with features like events, news, libraries and user survey. This web portal has both public and member access sections developed in joomla",
+                            tech: "Joomla, PHP, MySQL, JavaScript, jQuery"
                         },
                         {
                             title: "Idf.org",
                             url: "https://idf.org/",
-                            desc: "Idf.org is an organization web site developed in joomla, with lot of features. Publish diabetes stories, news ,library, partner sections, publications. Dedicated survey page over 25 different languages."
+                            desc: "Idf.org is an organization web site developed in joomla, with lot of features. Publish diabetes stories, news ,library, partner sections, publications. Dedicated survey page over 25 different languages.",
+                            tech: "Joomla, PHP, MySQL, JavaScript, jQuery"
                         },
                         {
                             title: "Frucom.eu",
                             url: "http://frucom.eu/",
-                            desc: "Frucom.eu is a web site developed in joomla for representative body of European traders in dried fruit & nuts, processed seafood and fruits. Integrated with user registration, news, teams, member access section."
+                            desc: "Frucom.eu is a web site developed in joomla for representative body of European traders in dried fruit & nuts, processed seafood and fruits. Integrated with user registration, news, teams, member access section.",
+                            tech: "Joomla, PHP, MySQL, JavaScript, jQuery"
                         }
                     ];
 
@@ -120,11 +128,15 @@
                         const container = document.getElementById('portfolio-list');
                         let html = '';
                         items.forEach(item => {
+                            let tech = item.tech ? item.tech.split(","):"";
                             html += `
                             <div class="col-md-6">
                                 <div class="details">
                                     <h2><a href="${item.url}" target="_blank">${item.title}</a></h2>
                                     <p>${item.desc}</p>
+                                    <ul class="block-lists">
+                                        ${tech.map(t => `<li>${t.trim()}</li>`).join('')}   
+                                    </ul>        
                                 </div>
                             </div>
                             `;
@@ -473,6 +485,20 @@
 
         gtag('config', 'UA-18711425-2');
     </script>
+    <script>
+    const text = "Welcome to my portfolio";
+    const element = document.getElementById("typewriter");
+    let index = 0;
+ 
+    function typeNextChar() {
+      if (index < text.length) {
+        element.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeNextChar, 100);
+      }
+    }
+    setTimeout(typeNextChar, 500);
+  </script>
 
     
 </body>
