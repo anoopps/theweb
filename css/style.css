@@ -14,6 +14,9 @@ h1, h2, h3, h4{
   background-color: #f8f8f8;
   color: #aba504;
 }
+#navigation a:hover{
+color: #454545;
+}
 .breadcrumb a{
    color: #444;
 }
@@ -85,11 +88,19 @@ p{
   clear: both;
   display: block;
 }
- .self-driven-projects > .col-md-6{
-  display: inline-block;
-margin-bottom: 15px;
-height: 150px;
+
+
+.self-driven-projects {
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.self-driven-projects > .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
 ul.block-lists{
   clear: both;
   display: block;
@@ -251,6 +262,7 @@ svg{
 div#portfolio-list
  {
     padding-bottom: 0px;
+    border-top: 0px;
 }
 /*Small devices (landscape phones, 576px and up)*/
 @media only screen and (max-width: 576px) {
