@@ -100,6 +100,16 @@ p{
     flex-direction: column;
     margin-bottom: 30px;
 }
+.self-driven-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.self-driven-list > .col-md-6 {
+    display: flex;
+    flex-direction: column;
+     margin-bottom: 30px;
+}
 
 ul.block-lists{
   clear: both;

@@ -152,60 +152,72 @@
                 <div class="col-md-12">
                     <h1>Self Driven Projects</h1>
                 </div>
-                <div class="col-md-6">
-                    <div class="details">
-                        <h2><a href="https://github.com/anoopps/reactFoodOrder" target="_blank">Node Task Manager -
-                                Role-Based Access</a> </h2>
-                        <p>A secure CRUD API for managing tasks with user authentication and role-based authorization.
-                        </p>
-                        <ul>
-                            <li>Built using Node.js and Express, backed by MongoDB.</li>
-                            <li>Implements JWT-based login for users with dierent roles (admin/user).</li>
-                            <li>RESTful API architecture for task creation, retrieval, updates, and deletion.</li>
-                        </ul>
-                    </div>
-                </div>
+                <div id="self-driven-list" class="row self-driven-list"></div>
+                <script>
+                    const selfDrivenProjects = [
+                        {
+                            title: "Node Task Manager - Role-Based Access",
+                            url: "https://github.com/anoopps/reactFoodOrder",
+                            desc: "A secure CRUD API for managing tasks with user authentication and role-based authorization.",
+                            features: [
+                                "Built using Node.js and Express, backed by MongoDB.",
+                                "Implements JWT-based login for users with different roles (admin/user).",
+                                "RESTful API architecture for task creation, retrieval, updates, and deletion."
+                            ]
+                        },
+                        {
+                            title: "React Food Order APP",
+                            url: "https://github.com/anoopps/reactFoodOrder",
+                            desc: "A responsive food ordering interface simulating a real-time user experience",
+                            features: [
+                                "Browse menu items, manage cart, and place orders.",
+                                "Designed with component-based architecture.",
+                                "Implements useState/useEffect for UI interactivity"
+                            ]
+                        },
+                        {
+                            title: "Book Review Hub",
+                            url: "https://github.com/anoopps/book-review-hub",
+                            desc: "Book Review Hub is a RESTful API application built with Node.js, Express.js and Prisma that allows users to register, authenticate, and post reviews for books.",
+                            features: [
+                                "User Authentication – Secure login & registration using JWT tokens",
+                                "CRUD operations for adding and managing books",
+                                "Authorization Middleware – Role-based access control for routes"
+                            ]
+                        },
+                        {
+                            title: "React Quiz App – ReactJS",
+                            url: "https://github.com/anoopps/reactQuiz",
+                            desc: "An interactive quiz game application with real-time scoring",
+                            features: [
+                                "Multiple-choice questions with result tracking.",
+                                "Simple state management using React hooks",
+                                "Mobile-first, fully responsive layout"
+                            ]
+                        }
+                    ];
 
+                    function renderSelfDrivenProjects(items) {
+                        const container = document.getElementById('self-driven-list');
+                        let html = '';
+                        items.forEach(item => {
+                            html += `
+                            <div class="col-md-6">
+                                <div class="details">
+                                    <h2><a href="${item.url}" target="_blank">${item.title}</a></h2>
+                                    <p>${item.desc}</p>
+                                    <ul>
+                                        ${item.features.map(f => `<li>${f}</li>`).join('')}
+                                    </ul>
+                                </div>
+                            </div>
+                            `;
+                        });
+                        container.innerHTML = html;
+                    }
 
-                <div class="col-md-6">
-                    <div class="details">
-                        <h2><a href="https://github.com/anoopps/reactFoodOrder" target="_blank">React Food Order APP</a>
-                        </h2>
-                        <p>A responsive food ordering interface simulating a real-time user experience</p>
-                        <ul>
-                            <li>Browse menu items, manage cart, and place orders.</li>
-                            <li>Designed with component-based architecture.</li>
-                            <li>Implements useState/useEffect for UI interactivity</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="details">
-                        <h2><a href="https://github.com/anoopps/book-review-hub" target="_blank">Book Review Hub</a>
-                        </h2>
-                        <p>Book Review Hub is a RESTful API application built with Node.js, Express.js and Prisma that
-                            allows users to register, authenticate, and post reviews for books.</p>
-                        <ul>
-                            <li>User Authentication – Secure login & registration using JWT tokens</li>
-                            <li>CRUD operations for adding and managing books</li>
-                            <li>Authorization Middleware – Role-based access control for routes</li>
-                        </ul>
-                    </div>
-                </div>
-
-                 <div class="col-md-6">
-                    <div class="details">
-                        <h2><a href="https://github.com/anoopps/reactQuiz" target="_blank">React Quiz App – ReactJS</a>
-                        </h2>
-                        <p>An interactive quiz game application with real-time scoring</p>
-                        <ul>
-                            <li>Multiple-choice questions with result tracking.</li>
-                            <li>Simple state management using React hooks</li>
-                            <li>Mobile-first, fully responsive layout</li>
-                        </ul>
-                    </div>
-                </div>
+                    renderSelfDrivenProjects(selfDrivenProjects);
+                </script>
 
             </div>
 
