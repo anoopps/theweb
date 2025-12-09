@@ -7,7 +7,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: #4e4e4e;
+  color: #455a64;
 }
 .row {
   border-top: 1px dotted #ccc;
@@ -140,7 +140,7 @@ ul.block-lists li {
   margin: 5px 3px 0px 0px; /*! padding: 0px; */
   padding: 3px 8px;
   height: auto;
-  background-color: #909090;
+  background-color: #aeaeae;
   color: #fff;
   font-size: 11px;
   font-weight: bold;
@@ -259,7 +259,7 @@ svg {
 }
 
 .block-lists-skills li:hover {
-  border: 2px solid #d4cfa0;
+  border: 2px solid #ffb8af;
 }
 
 .btn-primary {
